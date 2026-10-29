@@ -1,4 +1,4 @@
-#import "@preview/touying:0.7.3": *
+#import "@preview/touying:0.8.0": *
 
 // UKT corporate color palette (from theme3.xml clrScheme "UKT_blau")
 #let ukt-blue = rgb("#454B6A") // tx2 / dk2
@@ -185,7 +185,7 @@
 #let slide(
   config: (:),
   title: auto,
-  section: none,
+  section: auto,
   ..args,
 ) = touying-slide-wrapper(self => {
   let s = self.store
@@ -199,8 +199,8 @@
   // When a section title is given, the header band grows to host both the
   // small section caption (top) and the larger slide title (below), mirroring
   // the touying "build your own theme" example. Without a section, the
-  // original single-title band is preserved verbatim.
-  let has-section = section != none
+  // original single-title band is preserved verbatim. `auto` takes the
+  // caption from the current level-1 heading, if there is one.
   let band-height = 15% // if has-section { 22% } else { 15% }
   let top-margin = 18% // if has-section { 25% } else { 18% }
 
@@ -222,19 +222,22 @@
       width: 100%,
       height: 100%,
       inset: (left: 3%, right: 3%),
-      align(
-        horizon + left,
-        if has-section {
+      align(horizon + left, context {
+        let _section = if section == auto {
+          let h = utils.current-heading(level: 1)
+          if h != none { h.body }
+        } else { section }
+        if _section != none {
           stack(
             dir: ttb,
             spacing: 10pt,
-            text(size: 18pt, weight: "regular", fill: ukt-gold, section),
+            text(size: 18pt, weight: "regular", fill: ukt-gold, _section),
             text(size: 33pt, weight: "bold", fill: ukt-gold, _title),
           )
         } else {
           text(size: 33pt, weight: "bold", fill: ukt-gold, _title)
-        },
-      ),
+        }
+      }),
     ),
   )
 
