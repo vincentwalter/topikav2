@@ -429,6 +429,201 @@
 - Stratum corneum bildet ein Reservoir. 1x täglich reicht
 - Gesteigerte Wirkung und Nebenwirkungen durch okklusive Applikation
 
+= Calcineurininhibitoren
+== Wirkung
+#grid(
+  columns: (3fr, 1fr),
+  gutter: 12pt,
+  align(center, image(height: 100%, "assets/calcineurin_wirkung.jpg")),
+  align(bottom, box(text(18pt, taschenatlas))),
+)
+
+== Wirkstoffe & Indikationen
+*Tacrolimus (Protopic / Takrozem / Sumilor):*
+- 0,03 % Salbe – Kinder ab 2 Jahren - Atopische Dermatitis
+- 0,1 % Salbe – Erwachsene - Atopische Dermatitis
+- 0,1% Emulsion - Erwachsene - Psoriasis
+
+#v(0.5em)
+*Pimecrolimus (Elidel):*
+- 1 % Creme – leichte bis moderate AD (Kinder ab 2 J.)
+- Besonders geeignet: Gesicht/Hals
+
+// ─── JAKi ──────────────────────────────────────────────────────────────────────
+
+= JAK-Inhibitoren
+== Wirkmechanismus
+#grid(
+  columns: (3fr, 1fr),
+  gutter: 12pt,
+  align(center, image(height: 100%, "assets/jaki_wirkung.jpg")), align(bottom, box(text(18pt, taschenatlas))),
+)
+
+== Topische JAK-Inhibitoren im Überblick
+#grid(
+  columns: 2,
+  [
+    *Ruxolitinib 1,5 % (Opzelura):*
+    - Selektiver JAK1/JAK2-Inhibitor
+    - Zugelassen: nichtsegmentale Vitiligo mit Beteiligung des Gesichts
+    - bei Erwachsenen und Jugendlichen im Alter ab 12 Jahren
+    - 100g = 959,56 €
+  ],
+  image("assets/opzelura.png"),
+)
+#align(bottom + right, text(14pt)[Bildquelle Incyte])
+
+#grid(
+  columns: (1fr, 1fr),
+  column-gutter: 12pt,
+  [
+    *Delgocitinib 2 % (Anzupgo):*
+    - Pan-JAK-Inhibitor
+    - Zulassung: mittelschweres bis schweres chronisches Handekzem bei Erwachsenen, bei denen topische Kortikosteroide nicht ausreichen oder nicht geeignet sind
+    - 60g = 662,44€
+
+    #v(1fr)
+    #text(14pt)[Bildquelle LEO]
+  ],
+  grid(
+    columns: (2fr, 10fr),
+    rows: (1fr, 1fr),
+    box(height: 100%, width: 100%, fill: luma(220), stroke: gray, align(horizon, rotate(270deg)[Woche 0])),
+    align(left, image("assets/anzupgo_before.png")),
+
+    box(height: 100%, width: 100%, fill: luma(220), stroke: gray, align(horizon, rotate(270deg)[Woche 16])),
+    align(left, image("assets/anzupgo_after.png")),
+  ),
+)
+
+// ─── Psoriasis ────────────────────────────────────────────────────────────────
+
+= Psoriasis
+
+#slide(title: [Topische Therapie])[
+  #let card_rows = (16pt, 1fr)
+  #set text(14pt)
+  #grid(
+    columns: (1fr, 1fr, 1fr),
+    rows: (1fr, 1fr),
+    gutter: 12pt,
+    card(title: [Salicylsäure], rows: card_rows)[
+      - Wirkt abschuppend
+      - Verbessert Wirksamkeit nachfolgender Topika
+
+      *Präparate*
+      - Squamasol Lösung (10% Salicylsäure)
+      - Salicylvaseline (z.B. 5/10% Salicylsäure)
+    ],
+    card(title: [Vitamin-D Analoga], rows: card_rows)[
+      - Beeinflusst epidermale Differenzierung
+      - Nicht mehr als 30% der KOF
+
+      *Präparate*
+      - Curatoderm Lösung (Tacalcitol)
+      - Daivonex Creme (Calcipotriol)
+      - Silkis Salbe (Calcitriol)
+    ],
+    card(title: [Topische Kortikosteroide], rows: card_rows)[
+      - Wirken gut an der Kopfhaut
+
+      *Präparate*
+      - Clarelux Schaum (Clobetasolpropionat)
+      - Clobegalen Lösung / Shampoo (Clobetasolpropionat)
+    ],
+
+    card(title: [Calcineurininhibitoren], rows: card_rows)[
+      - Immunsuppression ohne Steroidnebenwirkungen
+      - Gut im Gesicht
+
+      *Präparate*
+      - Sumilor Lösung (Tacrolimus)
+      - Elidel Creme (Pimecrolimus)
+      - Protopic Salbe (Tacrolimus)
+    ],
+    card(title: [Kombinationspräparate], rows: card_rows)[
+      *Präparate*
+      - Daivobet Salbe (Calcipotriol/Betamethason)
+      - Wynzora Creme (Calcipotriol/Betamethason)
+      - Enstilar Schaum (Calcipotriol/Betamethason)
+    ],
+    card(title: [Dithranol], rows: card_rows)[
+      - 1913 entdeckt
+      - Hemmt Proliferation der Keratinozyten
+      - Genauer Wirkmechanismus unbekannt
+      - Stark reizend und färbend
+      - Seit 2022 nicht als Fertigpräparat verfügbar
+      - Oft nur stationär sinnvoll
+    ],
+  )
+]
+
+== Kopfhaut
+#grid(
+  columns: (3fr, 2fr),
+  gutter: 12pt,
+  image("assets/pso_haaransatz.JPG"),
+  uncover("2-")[
+    *Beispiel*
+    - Squamasol (Salicylsäure) zum Abschuppen
+    - Clarelux (Clobetasolpropionat) anfangs täglich, später im Wechsel mit
+    - Sumilor (Tacrolimus)
+  ],
+)
+
+== Gesicht
+#grid(
+  columns: (3fr, 2fr),
+  gutter: 12pt,
+  image("assets/pso_gesicht.JPG"),
+  uncover("2-")[
+    *Beispiel*
+    - Elidel (Pimecrolimus)
+    - Curatoderm (Tacalcitol)
+  ],
+)
+
+== Ellenbogen
+#grid(
+  columns: (3fr, 2fr),
+  gutter: 12pt,
+  image("assets/ellenbogen.JPG"),
+  uncover("2-")[
+    *Beispiel*
+    - Salicylvaseline (10% Salicylsäure) zum Abschuppen
+    - Wynzora (Calcipotriol/Betamethason)
+    - Enstilar (Calcipotriol/Betamethason)
+  ],
+)
+
+== Nägel
+#grid(
+  columns: (3fr, 2fr),
+  gutter: 12pt,
+  image("assets/pso_naegel.JPG"),
+  uncover("2-")[
+    *Beispiel*
+    #block(
+      fill: rgb(247, 223, 223),
+      inset: (x: 1em, y: 0.8em),
+      radius: 4pt,
+      width: 100%,
+      [
+        #set text(16pt)
+        #table(
+          columns: 2,
+          fill: none,
+          stroke: none,
+          [Clobetasol propionas], [0,05%],
+          [DMSO], [q.s.],
+          [Sililevo Nagellack], [3,3 ml],
+        )
+        d.s. Nagellack bei Nagelpsoriasis, 1x täglich vor dem Schlafengehen auf die betroffenen Nägel auftragen
+      ],
+    )
+  ],
+)
+
 // Abschlussfolie
 #end-slide()
 
