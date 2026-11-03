@@ -386,6 +386,30 @@
 })
 
 // ============================================================================
+// 5) Black slide — completely black, only gold strip, slide number and logo
+// ============================================================================
+
+#let black-slide(config: (:)) = touying-slide-wrapper(self => {
+  let bg = {
+    _bg-gold-strip
+    _bg-logo-icon(self.store.logo-icon-white)
+  }
+  let new-self = utils.merge-dicts(
+    self,
+    config-page(
+      paper: "presentation-16-9",
+      margin: (top: 0pt, bottom: 12%, left: 3%, right: 3%),
+      header: none,
+      footer: _content-footer(self, fill: ukt-gold),
+      footer-descent: 8mm,
+      background: bg,
+      fill: black,
+    ),
+  )
+  touying-slide(self: new-self, config: config, [])
+})
+
+// ============================================================================
 // Theme registration
 // ============================================================================
 

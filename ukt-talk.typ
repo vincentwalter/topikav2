@@ -68,6 +68,7 @@
 #let title-slide(..args) = if not _is-doc { theme.title-slide(..args) }
 #let section-slide(..args) = if not _is-doc { theme.section-slide(..args) }
 #let end-slide(..args) = if not _is-doc { theme.end-slide(..args) }
+#let black-slide(..args) = if not _is-doc { theme.black-slide(..args) }
 #let slide(..args) = if _is-doc { args.pos().join() } else {
   theme.slide(..args)
 }
