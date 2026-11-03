@@ -46,8 +46,10 @@
 
 = Grundlagen
 
-#align(center, image("assets/taschenatlas_haut_wirkstoff.jpg"))
-#cite(taschenatlas)
+#slide(title: [Grundlagen], section: none)[
+  #align(center, image("assets/taschenatlas_haut_wirkstoff.jpg"))
+  #cite(taschenatlas)
+]
 
 == Vehikel
 #align(center)[
@@ -57,7 +59,45 @@
 ]
 #cite(taschenatlas)
 
-//TODO WAS WO klinische Bilder + Momegalen
+== Warum unterschiedliche Vehikel?
+#align(center + horizon, grid(
+  columns: 2,
+  gutter: 2pt,
+  image("assets/akut.JPG"),
+  image("assets/chronisch.JPG"),
+))
+
+== Warum unterschiedliche Vehikel?
+#align(center + horizon, grid(
+  columns: 3,
+  gutter: 2pt,
+  image("assets/haar.JPG"),
+  image("assets/interdigital.JPG"),
+  image("assets/penis.JPG"),
+))
+
+== Warum unterschiedliche Vehikel?
+#layout(size => {
+  // Nagelbild auf Hochformat (2:3) zuschneiden, Mittelfinger (x ≈ 45 %) zentriert.
+  let h = size.height
+  let w = h * 2 / 3
+  align(center + horizon, grid(
+    columns: 3,
+    gutter: 2pt,
+    box(width: w, height: h, clip: true, align(left + top, move(
+      dx: w / 2 - 0.45 * h * 3 / 2,
+      image("assets/nägel.JPG", width: h * 3 / 2, height: h),
+    ))),
+    image("assets/pso_ohr.JPG", height: h),
+    image("assets/rosacea.JPG", height: h),
+  ))
+})
+
+== Beispiel Momegalen (Mometason)
+#align(center+horizon, image("assets/momegalen.png"))
+
+
+
 == Systematik der Grundlagen
 #align(center, image("assets/leitlinie_abbildung3.png", height: 100%))
 #cite(leitlinie)
