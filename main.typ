@@ -472,7 +472,7 @@
   image("assets/opzelura.png"),
 )
 #align(bottom + right, text(14pt)[Bildquelle Incyte])
-
+#pagebreak()
 #grid(
   columns: (1fr, 1fr),
   column-gutter: 12pt,
@@ -623,6 +623,16 @@
     )
   ],
 )
+
+#slide(title: [Zusammenfassung], section: none)[
+  - *Vehikel:* nach Hautzustand, Lokalisation und Alter wählen
+  - *Menge:* 1 Fingerspitze (0,5 g) reicht für 2% KOF
+  - *Rezepturen:* wenn kein passendes Fertigarzneimittel existiert
+  - *Kortikosteroide:* Klasse und therapeutischer Index
+  - *Calcineurininhibitoren:* steroidfrei, gut für Gesicht und Hals, brennen anfangs
+  - *JAK-Inhibitoren:* Vitiligo (Ruxolitinib), Handekzem (Delgocitinib)
+  - *Psoriasis:* Therapie nach Lokalisation wählen und kombinieren
+]
 
 // Abschlussfolie
 #end-slide()
