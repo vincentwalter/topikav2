@@ -248,6 +248,7 @@
     card(title: [Individualrezeptur])[
       - frei zusammengestellt
       - auf spezielle Patientenbedürfnisse abgestimmt
+      - wird von der Apotheke geprüft
     ],
   )
 ]
@@ -276,41 +277,47 @@
 
 #slide(title: [Rezepturen: Nicht nur Topika])[
   #grid(
-    columns: 2,
-    gutter: 2pt,
-    block(
-      fill: rgb(247, 223, 223),
-      inset: (x: 1em, y: 0.8em),
-      radius: 4pt,
-      width: 100%,
-      [
-        #set text(16pt)
-        120 Naltrexon-Hydrochlorid 5mg Kps\
-        Füllstoff: Mannitol 99,5T /Siliciumdioxid 0,5T
+    columns: (1fr, 1.2fr),
+    column-gutter: 6pt,
+    image("assets/darier.JPG", width: 100%, height: 100%, fit: "cover"),
+    grid(
+      rows: (auto, 1fr),
+      row-gutter: 6pt,
+      block(
+        fill: rgb(247, 223, 223),
+        inset: (x: 1em, y: 0.8em),
+        radius: 4pt,
+        width: 100%,
+        [
+          #set text(16pt)
+          120 Naltrexon-Hydrochlorid 5mg Kps\
+          Füllstoff: Mannitol 99,5T /Siliciumdioxid 0,5T
 
-        1x täglich
-      ],
-    ),
-    block(
-      fill: rgb(247, 223, 223),
-      inset: (x: 1em, y: 0.8em),
-      radius: 4pt,
-      width: 100%,
-      [
-        #set text(16pt)
-        Naltrexon-HCl 5mg/ml
-        #table(
-          columns: 2,
-          fill: none,
-          stroke: none,
-          [Naltrexonhydrochlorid], [0,5g],
-          [Ascorbinsäure], [0,5g],
-          [Natriumbenzoat], [0,1g],
-          [Glycerin 85%], [20ml],
-          [Aqua purificata], [ad 100,0g],
-        )
-        1x tgl 1ml
-      ],
+          1x täglich
+        ],
+      ),
+      block(
+        fill: rgb(247, 223, 223),
+        inset: (x: 1em, y: 0.8em),
+        radius: 4pt,
+        width: 100%,
+        height: 100%,
+        [
+          #set text(16pt)
+          Naltrexon-HCl 5mg/ml
+          #table(
+            columns: 2,
+            fill: none,
+            stroke: none,
+            [Naltrexonhydrochlorid], [0,5g],
+            [Ascorbinsäure], [0,5g],
+            [Natriumbenzoat], [0,1g],
+            [Glycerin 85%], [20ml],
+            [Aqua purificata], [ad 100,0g],
+          )
+          1x tgl 1ml
+        ],
+      ),
     ),
   )
 ]
@@ -625,13 +632,13 @@
 )
 
 #slide(title: [Zusammenfassung], section: none)[
-  - *Vehikel:* nach Hautzustand, Lokalisation und Alter wählen
+  - *Vehikel:* nach Hautzustand und Lokalisation wählen
   - *Menge:* 1 Fingerspitze (0,5 g) reicht für 2% KOF
   - *Rezepturen:* wenn kein passendes Fertigarzneimittel existiert
-  - *Kortikosteroide:* Klasse und therapeutischer Index
-  - *Calcineurininhibitoren:* steroidfrei, gut für Gesicht und Hals, brennen anfangs
-  - *JAK-Inhibitoren:* Vitiligo (Ruxolitinib), Handekzem (Delgocitinib)
-  - *Psoriasis:* Therapie nach Lokalisation wählen und kombinieren
+  - *Kortikosteroide:* Klasse und therapeutischer Index, Therapieprinzipien
+  - *Calcineurininhibitoren:* steroidfrei, gut für Gesicht, Hals, Beugen, Genital, brennen anfangs
+  - *JAK-Inhibitoren:* teuer, zugelassen für Vitiligo (Ruxolitinib), Handekzem (Delgocitinib)
+  - *Beispiel Psoriasis:* Therapie nach Lokalisation wählen und kombinieren
 ]
 
 // Abschlussfolie
